@@ -8,7 +8,7 @@ ARG USER_GID=$USER_UID
 RUN set -eux -o pipefail && \
     dnf install -y curl dnf-utils dnf-plugins-core epel-release git jq ncurses sudo which rsync && \
     dnf config-manager --set-enabled powertools && \ 
-    dnf install -y ca-certificates cmake gcc gcc-c++ glib2-devel xz
+    dnf install -y ca-certificates cmake
 
 # envs
 ENV INSTALL_PATH "/usr/local"
